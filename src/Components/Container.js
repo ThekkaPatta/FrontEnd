@@ -1,8 +1,10 @@
 import { Component } from "react";
-import Workpost from './Workpost'
-
 import { Route } from 'react-router-dom';
+
+
+import Workpost from './Workpost'
 import Login from "../Body/Login";
+import Home from './Home'
 
 class Container extends Component{
     render(){
@@ -10,6 +12,7 @@ class Container extends Component{
             <div>
                 <Route path="/workpost" component={Workpost} />
                 <Route path="/login" component={Login} />
+                <Route path="/home"  component={Home}/>
             </div>
 
         )

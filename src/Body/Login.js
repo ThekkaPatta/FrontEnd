@@ -18,14 +18,9 @@ class Login extends Component {
         axios.post("http://localhost:500/user/login", this.state)
             .then((response) => {
                 console.log(response);
-                localStorage.setItem('token', response.data.token)
-                localStorage.setItem('_id', response.data._id)
-                console.log(response)
-                localStorage.setItem('userType', 'user')
-                window.location.href = "/workpost";
-                this.setState({
-                    loginChk: true
-                })
+                localStorage.setItem('utoken', response.data.token)
+                localStorage.setItem('u_id', response.data._id)
+                window.location.href = "/home";
                 
             })
             .catch((err) => {
@@ -38,10 +33,8 @@ class Login extends Component {
         axios.post("http://localhost:350/teacher/login", this.state)
             .then((response) => {
                 console.log(response);
-                localStorage.setItem('token', response.data.token)
-                localStorage.setItem('_id', response.data._id)
-                console.log(response)
-                localStorage.setItem('userType', 'teacher')
+                localStorage.setItem('wtoken', response.data.token)
+                localStorage.setItem('w_id', response.data._id)
                 window.location.href = "/notice";
                 this.setState({
                     loginChk: true
