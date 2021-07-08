@@ -6,7 +6,7 @@ class Workpost extends Component {
     state={
         Username:"",
         PhoneNo:"",
-        // Tags:"",
+        Tags:"",
         Workdescription:"",
     }
 
@@ -70,7 +70,7 @@ class Workpost extends Component {
                                         <input type="file" class="form-control" id="picture"
                                             placeholder=" Upload the picture" />
                                     </div> */}
-                                    {/* <div class="form-group">
+                                    <div class="form-group">
                                         <label for="exampleInputtext">Tags</label>
                                         <select name="tags" id="tags" value={this.state.Tags} 
                                         onChange={(event) => { this.setState({ Tags: event.target.value }) }}>
@@ -78,7 +78,7 @@ class Workpost extends Component {
                                             <option value="mechanic">Mechanic</option>
                                             <option value="Construction">Construction</option>
                                         </select>
-                                    </div> */}
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">

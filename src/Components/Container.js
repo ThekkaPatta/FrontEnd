@@ -10,8 +10,9 @@ class Container extends Component{
     render(){
         return(
             <div>
+                
+                <Route exact path="/login" component={Login} />
                 <Route path="/workpost" component={Workpost} />
-                <Route path="/login" component={Login} />
                 <Route path="/home"  component={Home}/>
             </div>
 
