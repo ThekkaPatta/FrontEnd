@@ -1,6 +1,8 @@
 import './App.css';
 import {BrowserRouter} from 'react-router-dom';
-import Container from './Components/Container';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Container from './Body/Container';
 import Head from './Header/Header';
 
 function App() {

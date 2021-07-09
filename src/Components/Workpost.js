@@ -1,5 +1,4 @@
 import { Component } from "react";
-// import axios from "axios";
 import '../assets/css/workpost.css'
 
 class Workpost extends Component {

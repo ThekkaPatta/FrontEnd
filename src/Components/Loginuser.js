@@ -5,12 +5,10 @@ import { Link } from 'react-router-dom';
 // import '../CSS/login.css';
 import '../assets/css/workpost.css'
 
-class Login extends Component {
+class Loginuser extends Component {
     state = {
         Username: "",
-        Password: "",
-        Username2:"",
-        Password2:""
+        Password: ""
 
     }
     sendUserData = (e) => {
@@ -33,26 +31,7 @@ class Login extends Component {
                 alert("Invalid Credential")
             })
     }
-    sendUserData2 = (e) => {
-        e.preventDefault();
-        axios.post("http://localhost:350/teacher/login", this.state)
-            .then((response) => {
-                console.log(response);
-                localStorage.setItem('token', response.data.token)
-                localStorage.setItem('_id', response.data._id)
-                console.log(response)
-                localStorage.setItem('userType', 'teacher')
-                window.location.href = "/notice";
-                this.setState({
-                    loginChk: true
-                })
-                alert("You Are Logged In !!")
-            })
-            .catch((err) => {
-                console.log(err.response)
-                alert("Invalid Credential")
-            })
-    }
+    
     render() {
         return (
             <div class="container login-container">
@@ -77,29 +56,7 @@ class Login extends Component {
                             <a href="#" class="ForgetPwd">Forget Password?</a>
                         </div>
                     </form>
-                </div>
-                <div class="col-md-6 login-form-2">
-                    <h1>!!! Login As Teacher !!!</h1>
-                    <form>
-                        <div class="form-group">
-                        <h2><input type="text" value={this.state.Username2} placeholder="Username "
-                            onChange={(event) => { this.setState({ Username2: event.target.value }) }} /></h2>
-                        </div>
-                        <div class="form-group">
-                        <h2><input type="password" value={this.state.Password2} placeholder="Passwword "
-                            onChange={(event) => { this.setState({ Password2: event.target.value }) }} /></h2> 
-                        </div>
-                        <div class="form-group">
-                        <h3><button onClick={this.sendUserData2} href="/notice">
-                         Login</button>
-                     </h3>
-                        </div>
-                        <div class="form-group">
-
-                            <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
-                        </div>
-                    </form>
-                </div>
+                </div>               
             </div>
         </div>
 
@@ -108,4 +65,4 @@ class Login extends Component {
         )
     }
 }
-export default Login
+export default Loginuser
