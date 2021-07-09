@@ -3,7 +3,7 @@ import axios from 'axios';
 class Loginworker extends Component {
     state = {
         Username: "",
-        Password: "",
+        Password: ""
          }
     sendUserData2 = (e) => {
         e.preventDefault();
@@ -46,7 +46,7 @@ class Loginworker extends Component {
                      </h3>
                         </div>
                         <div class="form-group">
-                            <a href="#" class="ForgetPwd">Forget Password?</a>
+                            
                         </div>
                     </form>
             

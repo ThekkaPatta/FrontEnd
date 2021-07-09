@@ -1,18 +1,12 @@
 import './App.css';
 import {BrowserRouter} from 'react-router-dom';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import Container from './Body/Container'
-import Header from './Header/Header';
-
-
+import Container from './Components/Container';
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Header></Header>
-      <Container></Container>
+      <Container/>
     </div>
     </BrowserRouter>
   );
