@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import Loginuser from "../Components/Loginuser";
 import Loginworker from "../Components/Loginworker";
 import Home from "../Components/Home";
+import Registeruser from "../Components/Registeruser";
 
 class Container extends Component{
     render(){
@@ -14,6 +15,7 @@ class Container extends Component{
                 <Route path="/loginworker" component={Loginworker} />
                 <Route exact path="/" component={Home} />
                 <Route path="/home" component={Home} />
+                <Route path="/registeruser" component={Registeruser} />
             </div>
 
         )

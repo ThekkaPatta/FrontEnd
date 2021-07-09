@@ -2,7 +2,7 @@ import { Component } from "react";
 import '../assets/css/register.css';
 import axios from 'axios';
 
-class Register extends Component{
+class Registeruser extends Component{
     state ={
         Uimage: "",
         UFullName : " ",
@@ -63,4 +63,4 @@ class Register extends Component{
         )
     }
 }
-export default Register
+export default Registeruser
