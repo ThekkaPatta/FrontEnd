@@ -6,6 +6,7 @@ class Home extends Component{
     Postwork=(e)=>{
         e.preventDefault()
         window.location.href='/workpost'
+        //redirecting to workpost page
 
     }
     render(){
