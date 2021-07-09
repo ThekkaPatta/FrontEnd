@@ -14,13 +14,14 @@ class Loginuser extends Component {
             .then((response) => {
                 console.log(response);
                 localStorage.setItem('token', response.data.token)
-                localStorage.setItem('_id', response.data._id)
+                localStorage.setItem('u_id', response.data._id)
                 console.log(response)
                 localStorage.setItem('userType', 'user')
                 window.location.href = "/workpost";
                 this.setState({
                     loginChk: true
                 })
+                alert("You Are Logged In !!")
                 
             })
             .catch((err) => {
@@ -50,7 +51,7 @@ class Loginuser extends Component {
                      </h3>
                         </div>
                         <div class="form-group">
-                        <p>Do not have  an account? <a href="/registeruser"> Login </a></p>
+                        <p>Do not have  an account? <a href="/registeruser"> SignUp </a></p>
                            
                         </div>
                     </form>

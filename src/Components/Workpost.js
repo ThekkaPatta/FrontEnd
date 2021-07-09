@@ -46,7 +46,7 @@ class Workpost extends Component {
         axios.post("http://localhost:500/work/post",data)
     .then((response)=>{
         console.log(response)
-        alert("Posted work")
+        alert("Work Posted ")
         window.location.href='#';
     })
 

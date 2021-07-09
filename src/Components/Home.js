@@ -1,10 +1,13 @@
-import { Component } from "react";
+  import { Component } from "react";
 
-class Home extends Component{
-    render(){
-        return(
+class Home extends Component {
+    render() {
+        return (
             <div>
-                <h1> this is a home page</h1>
+                <a href="/loginuser" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login As User</a>
+                <a href="/loginworker" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Login As Worker</a>
+
+
             </div>
 
         )
