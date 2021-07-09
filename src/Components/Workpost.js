@@ -42,8 +42,6 @@ class Workpost extends Component {
         data.append('Tags', this.state.Tags)
         data.append('Workdescription', this.state.Workdescription)
         data.append('Wimage',this.state.Wimage)
-        console.log(data)
-    
     
         axios.post("http://localhost:500/work/post",data)
     .then((response)=>{
