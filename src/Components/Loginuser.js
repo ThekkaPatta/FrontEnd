@@ -1,8 +1,5 @@
 import { Component } from "react";
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-// import '../CSS/style.css';
-// import '../CSS/login.css';
 import '../assets/css/workpost.css'
 
 class Loginuser extends Component {
