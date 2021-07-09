@@ -20,6 +20,7 @@ class Login extends Component {
                 console.log(response);
                 localStorage.setItem('utoken', response.data.token)
                 localStorage.setItem('u_id', response.data._id)
+                localStorage.setItem('userType','User')
                 window.location.href = "/home";
                 
             })

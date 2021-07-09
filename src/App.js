@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Head></Head>
+      {/* <Head></Head> */}
       <Container></Container>
     </div>
     </BrowserRouter>

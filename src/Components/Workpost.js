@@ -8,6 +8,7 @@ class Workpost extends Component {
         PhoneNo:"",
         Tags:"",
         Workdescription:"",
+        Wimage:"",
     }
 
     componentDidMount(){
@@ -26,16 +27,25 @@ class Workpost extends Component {
         })
     }
 
+    fileHandler = (e) => {
+        this.setState({
+            Wimage: e.target.files[0]
+        })
+    }
+
     Workpost=(e)=>{
         e.preventDefault();
+        const data = new FormData() // new line
 
-    //     const data ={
-    //         Username:this.state.Username,
-    //         phoneNo:this.state.PhoneNo,
-    //         Tags:this.state.Tags,
-    //         Workdescription:this.state.Workdescription
-    // }
-    axios.post("http://localhost:500/work/post",this.state)
+        data.append('Username', this.state.Username)
+        data.append('PhoneNo', this.state.PhoneNo)
+        data.append('Tags', this.state.Tags)
+        data.append('Workdescription', this.state.Workdescription)
+        data.append('Wimage',this.state.Wimage)
+        console.log(data)
+    
+    
+        axios.post("http://localhost:500/work/post",data)
     .then((response)=>{
         console.log(response)
         alert("Posted work")
@@ -65,13 +75,13 @@ class Workpost extends Component {
                                         <input type="email" class="form-control" id="exampleInputEmail"
                                             placeholder=" Enter Email id" value={this.state.PhoneNo}/>
                                     </div>
-                                    {/* <div class="form-group">
+                                    <div class="form-group">
                                         <label for="picture">Picture</label>
                                         <input type="file" class="form-control" id="picture"
-                                            placeholder=" Upload the picture" />
-                                    </div> */}
+                                            placeholder=" Upload the picture" onChange={this.fileHandler}/>
+                                    </div>
                                     <div class="form-group">
-                                        <label for="exampleInputtext">Tags</label>
+                                        <label for="exampleInputtext">Tags</label><br></br>
                                         <select name="tags" id="tags" value={this.state.Tags} 
                                         onChange={(event) => { this.setState({ Tags: event.target.value }) }}>
                                             <option value="plumber">Plumber</option>
