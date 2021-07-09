@@ -5,21 +5,21 @@ import axios from 'axios';
 class Registeruser extends Component{
     state ={
         Uimage: "",
-        UFullName : " ",
-        UAddress : " ",
-        UPhoneNo : " ",
-        UUsername : " ",
-        UPassword : " "
+        UFullName : "",
+        UAddress : "",
+        UPhoneNo : "",
+        UUsername : "",
+        UPassword : ""
     }
     sendUserData=()=>{
         const data= new FormData() 
 
         data.append ('Uimage', this.state.Uimage)
-        data.append ('FullName', this.state.UFullName)
-        data.append ('Address', this.state.UAddress)
-        data.append ('PhoneNo', this.state.UPhoneNo)
-        data.append ('Username', this.state.UUsername)
-        data.append ('Password', this.state.UPassword)
+        data.append ('UFullName', this.state.UFullName)
+        data.append ('UAddress', this.state.UAddress)
+        data.append ('UPhoneNo', this.state.UPhoneNo)
+        data.append ('UUsername', this.state.UUsername)
+        data.append ('UPassword', this.state.UPassword)
         
         axios.post("http://localhost:500/register/insert", data)
         .then()
