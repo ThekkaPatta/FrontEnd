@@ -50,6 +50,7 @@ class Loginuser extends Component {
                      </h3>
                         </div>
                         <div class="form-group">
+                        <p>Do not have  an account? <a href="/registeruser"> Login </a></p>
                             <a href="#" class="ForgetPwd">Forget Password?</a>
                         </div>
                     </form>
