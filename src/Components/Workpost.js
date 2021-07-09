@@ -1,7 +1,56 @@
+import axios from "axios";
 import { Component } from "react";
 import '../assets/css/workpost.css'
 
 class Workpost extends Component {
+    state={
+        Username:"",
+        PhoneNo:"",
+        Tags:"",
+        Workdescription:"",
+        Wimage:"",
+    }
+
+    componentDidMount(){
+        var u_id = localStorage.getItem('u_id');
+        alert(u_id)
+        axios.get("http://localhost:500/user/single/" +u_id)
+            .then((response)=>{
+                console.log(response)
+                this.setState({
+                    Username : response.data.UUsername,
+                    PhoneNo : response.data.UPhoneNo,
+                })
+            })
+            .catch((err)=>{
+                console.log(err.response)
+        })
+    }
+
+    fileHandler = (e) => {
+        this.setState({
+            Wimage: e.target.files[0]
+        })
+    }
+
+    Workpost=(e)=>{
+        e.preventDefault();
+        const data = new FormData() // new line
+
+        data.append('Username', this.state.Username)
+        data.append('PhoneNo', this.state.PhoneNo)
+        data.append('Tags', this.state.Tags)
+        data.append('Workdescription', this.state.Workdescription)
+        data.append('Wimage',this.state.Wimage)
+    
+        axios.post("http://localhost:500/work/post",data)
+    .then((response)=>{
+        console.log(response)
+        alert("Posted work")
+        window.location.href='#';
+    })
+
+    }
     render() {
         return (
             <div>
@@ -16,21 +65,23 @@ class Workpost extends Component {
                                 <div class="col-md-6 form-line">
                                     <div class="form-group">
                                         <label for="exampleInputUsername">Your name</label>
-                                        <input type="text" class="form-control" id="" placeholder=" Enter Name" />
+                                        <input type="text" class="form-control" id="" placeholder=" Enter Name" value={this.state.Username}
+                                        />
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail">Email Address</label>
                                         <input type="email" class="form-control" id="exampleInputEmail"
-                                            placeholder=" Enter Email id" />
+                                            placeholder=" Enter Email id" value={this.state.PhoneNo}/>
                                     </div>
                                     <div class="form-group">
                                         <label for="picture">Picture</label>
                                         <input type="file" class="form-control" id="picture"
-                                            placeholder=" Upload the picture" />
+                                            placeholder=" Upload the picture" onChange={this.fileHandler}/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputtext">Tags</label>
-                                        <select name="tags" id="tags">
+                                        <label for="exampleInputtext">Tags</label><br></br>
+                                        <select name="tags" id="tags" value={this.state.Tags} 
+                                        onChange={(event) => { this.setState({ Tags: event.target.value }) }}>
                                             <option value="plumber">Plumber</option>
                                             <option value="mechanic">Mechanic</option>
                                             <option value="Construction">Construction</option>
@@ -40,12 +91,12 @@ class Workpost extends Component {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="description"> Work Description</label>
-                                        <textarea class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+                                        <textarea class="form-control" id="description" placeholder="Enter Your Message" 
+                                        value={this.state.Workdescription} onChange={(event) => { this.setState({ Workdescription: event.target.value }) }}></textarea>
                                     </div>
                                     <div>
 
-                                        <button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane"
-                                            aria-hidden="true"></i> Post the work</button>
+                                    <input type="submit" value="Update" onClick={this.Workpost} />
                                     </div>
 
                                 </div>
