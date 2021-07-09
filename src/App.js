@@ -1,13 +1,13 @@
 import './App.css';
 import {BrowserRouter} from 'react-router-dom';
 import Container from './Components/Container';
+import Header from './Header/Header';
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <Container/>
-    </div>
+    <Header></Header>
+      <Container></Container>
     </BrowserRouter>
   );
   
