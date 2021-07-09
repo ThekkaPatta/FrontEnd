@@ -69,9 +69,9 @@ class Workpost extends Component {
                                         />
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail">Email Address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail"
-                                            placeholder=" Enter Email id" value={this.state.PhoneNo}/>
+                                        <label for="exampleInputPhoneNo">Email Address</label>
+                                        <input type="text" class="form-control" id="exampleInputPhoneNo"
+                                            placeholder=" Enter Phone Number" value={this.state.PhoneNo}/>
                                     </div>
                                     <div class="form-group">
                                         <label for="picture">Picture</label>
