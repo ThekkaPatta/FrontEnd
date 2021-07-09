@@ -1,18 +1,17 @@
+
 import './App.css';
-import {BrowserRouter} from 'react-router-dom';
-import Container from './Components/Container';
-import Head from './Header/Header';
+import { BrowserRouter } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-     <Head></Head>
-      <Container></Container>
-    </div>
+      <div className="App">
+      this is jbjd
+      </div>
     </BrowserRouter>
   );
-  
 }
 
 export default App;
