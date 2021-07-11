@@ -1,10 +1,12 @@
 import { Component } from "react";
 import axios from 'axios';
+import '../assets/css/Login.css'
+
 class Loginworker extends Component {
     state = {
         Username: "",
-        Password: ""
-         }
+        Password: "",
+    }
     sendUserData2 = (e) => {
         e.preventDefault();
         axios.post("http://localhost:500/worker/login", this.state)
@@ -27,32 +29,29 @@ class Loginworker extends Component {
     }
     render() {
         return (
-            <div class="container login-container">
-            <div class="row">
-                <div class="col-md-6 login-form-1">
-                    <h1>!!! Login As Worker !!!</h1>
-                    <form>
-                        <div class="form-group">
-                        <h2><input type="text" value={this.state.WUsername} placeholder="Username"
-                            onChange={(event) => { this.setState({ WUsername: event.target.value }) }} /></h2>
-                        </div>
-                        <div class="form-group">
-                      <h2><input type="password" value={this.state.WPassword} placeholder="Password"
-                            onChange={(event) => { this.setState({ WPassword: event.target.value }) }} /></h2>
-                        </div>
-                        <div class="form-group">
-                        <h3><button onClick={this.sendUserData2} href="#">
-                        Login</button>
-                     </h3>
-                        </div>
-                        <div class="form-group">
-                        <p>Do not have  an account? <a href="/registeruser"> SignUp </a></p>
-                        </div>
-                    </form>
-            
+            <div class="lw">
+                <div class="wrapper">
+                    <div class="circle circle1"></div>
+                    <div class="circle circle2"></div>
+                    <div class="form">
+                        <h1>Login As A Worker</h1>
+                        <form>
+                           <h2> <input type="text" placeholder="xyz@mail.com" alue={this.state.WUsername} placeholder="Username"
+                                onChange={(event) => { this.setState({ WUsername: event.target.value }) }} /></h2>
+                           <h2> <input type="password" placeholder="password" value={this.state.WPassword} placeholder="Password"
+                                onChange={(event) => { this.setState({ WPassword: event.target.value }) }} /></h2>
+                           <h2> <button type="submit" id="login" onClick={this.sendUserData2}>Login</button></h2>
+                            <div class="forgot-signup">
+                            <h3> <a class="btn btn-danger" href="#">Forgot password?</a></h3>
+                      <h3>  <a class="btn btn-info" href="/registerworker">Sign Up</a></h3>
+
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
+                <div class="background"></div>
             </div>
-        </div>
 
 
 
