@@ -15,7 +15,6 @@ class Loginuser extends Component {
                 console.log(response);
                 localStorage.setItem('token', response.data.token)
                 localStorage.setItem('_id', response.data._id)
-                console.log(response)
                 localStorage.setItem('userType', 'user')
                 window.location.href = "/workpost";
                 this.setState({
@@ -50,7 +49,7 @@ class Loginuser extends Component {
                      </h3>
                         </div>
                         <div class="form-group">
-                        <p>Do not have  an account? <a href="/registeruser"> Login </a></p>
+                        <p>Do not have  an account? <a href="/registeruser"> SignUp </a></p>
                             <a href="#" class="ForgetPwd">Forget Password?</a>
                         </div>
                     </form>

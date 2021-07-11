@@ -1,11 +1,17 @@
+.fp{
+  height: 100vh !important;
+}
+
 .content-header{
   font-family: 'Oleo Script', cursive;
   color:#fcc500;
   font-size: 45px;
+  
 }
 
 .section-content{
-  text-align: center; 
+  text-align: center;
+  margin-top:8%;
 
 }
 #contact{
@@ -35,7 +41,7 @@
   margin-top: 10px;
 }
 label{
-  font-size: 1.3em;
+  font-size: 1.6em;
   line-height: 1em;
   font-weight: normal;
 }
@@ -49,9 +55,9 @@ textarea.form-control {
 }
 
 .submit{
-  font-size: 1.1em;
   float: right;
   width: 150px;
+  height:30px;
   background-color: transparent;
   color: #fff;
 

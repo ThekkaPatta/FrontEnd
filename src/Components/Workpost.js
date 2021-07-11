@@ -12,7 +12,7 @@ class Workpost extends Component {
     }
 
     componentDidMount(){
-        var u_id = localStorage.getItem('u_id');
+        var u_id = localStorage.getItem('_id');
         alert(u_id)
         axios.get("http://localhost:500/user/single/" +u_id)
             .then((response)=>{
@@ -53,7 +53,7 @@ class Workpost extends Component {
     }
     render() {
         return (
-            <div>
+            <div class='fp'>
                 <section id="contact">
                     <div class="section-content">
                         <h1 class="section-header"><span class="content-header wow fadeIn " data-wow-delay="0.2s"
@@ -69,7 +69,7 @@ class Workpost extends Component {
                                         />
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPhoneNo">Email Address</label>
+                                        <label for="exampleInputPhoneNo">Enter Phone Number</label>
                                         <input type="text" class="form-control" id="exampleInputPhoneNo"
                                             placeholder=" Enter Phone Number" value={this.state.PhoneNo}/>
                                     </div>
@@ -96,7 +96,7 @@ class Workpost extends Component {
                                     </div>
                                     <div>
 
-                                    <input type="submit" value="Update" onClick={this.Workpost} />
+                                    <h5><input type="submit" value="Post the Work" onClick={this.Workpost} /></h5>
                                     </div>
 
                                 </div>
