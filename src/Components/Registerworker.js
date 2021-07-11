@@ -45,24 +45,24 @@ class Registerworker extends Component{
             <div class="main-agileinfo">
                 <div class="agileits-top">
                     <form>
-                    <p>Full Name:<input type="text" value={this.state.WFullName} 
-    onChange={(event)=>{this.setState({WFullName:event.target.value})}}/></p>
-                    <p>Address:<input type="text" value={this.state.WAddress} 
-    onChange={(event)=>{this.setState({WAddress:event.target.value})}}/></p>
-                    <p> Phone Number:<input type="text" value={this.state.WPhoneNo} 
-    onChange={(event)=>{this.setState({WPhoneNo:event.target.value})}}/></p>
-                    <p> Skills:<input type="text" value={this.state.WSkills} 
-    onChange={(event)=>{this.setState({WSkills:event.target.value})}}/></p>
-                    <p>Username:<input type="text" value={this.state.WUsername} 
-    onChange={(event)=>{this.setState({WUsername:event.target.value})}}/></p>
-                    <p>Password:<input type="Password" value={this.state.WPassword} 
-    onChange={(event)=>{this.setState({WPassword:event.target.value})}}/></p>
-    <p>Upload Photo:<input type="file" placeholder="Upload photo" name="Wimage" 
-     onChange={this.imageHandler}/></p>
-                        <p><input type="submit" onClick={this.sendUserData}/>  </p>
+                    <h2>Full Name:<input type="text" value={this.state.WFullName} 
+    onChange={(event)=>{this.setState({WFullName:event.target.value})}}/></h2>
+                    <h2>Address:<input type="text" value={this.state.WAddress} 
+    onChange={(event)=>{this.setState({WAddress:event.target.value})}}/></h2>
+                    <h2> Phone Number:<input type="text" value={this.state.WPhoneNo} 
+    onChange={(event)=>{this.setState({WPhoneNo:event.target.value})}}/></h2>
+                    <h2> Skills:<input type="text" value={this.state.WSkills} 
+    onChange={(event)=>{this.setState({WSkills:event.target.value})}}/></h2>
+                    <h2>Username:<input type="text" value={this.state.WUsername} 
+    onChange={(event)=>{this.setState({WUsername:event.target.value})}}/></h2>
+                    <h2>Password:<input type="Password" value={this.state.WPassword} 
+    onChange={(event)=>{this.setState({WPassword:event.target.value})}}/></h2>
+    <h2>Upload Photo:<input type="file" placeholder="Upload photo" name="Wimage" 
+     onChange={this.imageHandler}/></h2>
+                        <h2><input type="submit" onClick={this.sendUserData}/>  </h2>
 
                     </form>
-                    <p>Already have an account? <a href="/login"> Login </a></p>
+                    <h2>Already have an account? <a href="/loginworker"> Login </a></h2>
                 </div>
             </div>
         </div> 

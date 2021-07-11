@@ -11,7 +11,7 @@ class Header extends Component {
                                 <img class="logo" height="50px"/>
                             </a>
                         </div>
-                            <nav>
+                            <nav className="navi">
                                 <ul>
                                     <li><a href="">home</a></li>
                                     <li><a href="">work</a></li>
