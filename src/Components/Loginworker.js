@@ -46,7 +46,7 @@ class Loginworker extends Component {
                      </h3>
                         </div>
                         <div class="form-group">
-                        <p>Do not have  an account? <a href="/registerworker"> SignUp </a></p>
+                        <p>Do not have  an account? <a href="/registeruser"> SignUp </a></p>
                         </div>
                     </form>
             
