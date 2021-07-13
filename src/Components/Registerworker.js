@@ -26,7 +26,7 @@ class Registerworker extends Component{
         
         axios.post("http://localhost:500/worker/insert", data)
         .then(
-            alert('posted')
+            alert('Welcome ! You Are Regisered As A Worker')
         )
         .catch(err=>{
             console.log(err)

@@ -24,7 +24,7 @@ class Registeruser extends Component {
 
         axios.post("http://localhost:500/user/insert", data)
             .then(
-                alert('posted')
+                alert('Welcome ! You Are Registered As A User')
             )
             .catch(err => {
                 console.log(err)
