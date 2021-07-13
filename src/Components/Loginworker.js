@@ -34,7 +34,7 @@ class Loginworker extends Component {
                     <div class="circle circle1"></div>
                     <div class="circle circle2"></div>
                     <div class="form">
-                        <h1>hello</h1>
+                        <h1>Worker Login</h1>
                         <form>
                             <input type="text" placeholder="xyz@mail.com" alue={this.state.WUsername} placeholder="Username"
                             onChange={(event) => { this.setState({ WUsername: event.target.value }) }}/>
@@ -43,7 +43,7 @@ class Loginworker extends Component {
                             <button type="submit" id="login"  onClick={this.sendUserData2}>Login</button>
                             <div class="forgot-signup">
                                 <a href="#">Forgot password?</a>
-                                <a href="#">Sign Up</a>
+                                <a href="/registerworker">Sign Up as Worker</a>
 
                             </div>
                         </form>

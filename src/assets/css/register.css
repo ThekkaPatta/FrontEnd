@@ -2,7 +2,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-ol, ul {
+ol, ul{
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -116,7 +116,8 @@ h1 {
 
 /*-- main --*/
 .main-w3layouts {
-  padding: 3em 10em 5em;
+  padding: 3em 5em 3em;
+  margin-top: 1px;
 }
 
 .main-agileinfo {
@@ -130,14 +131,18 @@ h1 {
   padding: 1em;
 }
 
+p{
+  font-size: 1.2em;
+}
 input[type="text"], input[type="password"], input[type="file"] {
-  font-size: 0.9em;
+  font-size: 1.2em;
+  font-weight: bolder;
   color: rgb(17, 17, 17);
   font-weight: 100;
   width: 94.5%;
   display: block;
   border: none;
-  padding: 0.8em;
+  padding: 0.5em;
   border: solid 1px rgba(10, 10, 10, 0.37);
   -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
@@ -151,7 +156,7 @@ input[type="text"], input[type="password"], input[type="file"] {
 }
 
   input.email, input.text.w3lpass, input.text.l, input.text.u {
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 .text:focus, .text:valid {
@@ -164,7 +169,7 @@ input[type="text"], input[type="password"], input[type="file"] {
 
 ::-webkit-input-placeholder {
   color: rgb(0, 0, 0);
-  font-weight: 100;
+  font-weight: 500;
 }
 
 

@@ -67,8 +67,6 @@ class Home extends Component {
                             
                         </div>
                     </div>
-                    <br/><br/><br/>
-                    <p> Don't have an account ? <a href=''>Sign Up Here</a></p>
                 </div>
                 
 
