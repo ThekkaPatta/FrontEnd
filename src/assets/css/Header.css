@@ -1,5 +1,11 @@
 
-  header {
+ .logo{
+  background-image: url("../Images/logo.PNG"); 
+  height: 85px;
+  width: 200px;
+  place-content: center;
+ }
+ header {
     padding: 0px 0;
     background: repeating-linear-gradient(45deg, #f0f2ed, #f0f2ed 20px, #f8f4eb 20px, #f8f4eb 40px);
     box-shadow: 0 4px 6px rgba(0,0,0,.2);

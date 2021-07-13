@@ -26,8 +26,8 @@ h1 {
 }
 
 .form {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     position: relative;
     place-content: center;
     font-family: 'Noto Sans JP', sans-serif;

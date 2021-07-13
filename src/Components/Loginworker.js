@@ -36,14 +36,14 @@ class Loginworker extends Component {
                     <div class="form">
                         <h1>Worker Login</h1>
                         <form>
-                            <input type="text" placeholder="xyz@mail.com" alue={this.state.WUsername} placeholder="Username"
-                            onChange={(event) => { this.setState({ WUsername: event.target.value }) }}/>
-                            <input type="password" placeholder="password"  value={this.state.WPassword} placeholder="Password"
-                            onChange={(event) => { this.setState({ WPassword: event.target.value }) }}/>
-                            <button type="submit" id="login"  onClick={this.sendUserData2}>Login</button>
+                           <h2> <input type="text" placeholder="xyz@mail.com" alue={this.state.WUsername} placeholder="Username"
+                                onChange={(event) => { this.setState({ WUsername: event.target.value }) }} /></h2>
+                           <h2> <input type="password" placeholder="password" value={this.state.WPassword} placeholder="Password"
+                                onChange={(event) => { this.setState({ WPassword: event.target.value }) }} /></h2>
+                           <h2> <button type="submit" id="login" onClick={this.sendUserData2}>Login</button></h2>
                             <div class="forgot-signup">
-                                <a href="#">Forgot password?</a>
-                                <a href="/registerworker">Sign Up as Worker</a>
+                            <h3> <a class="btn btn-danger" href="#">Forgot password?</a></h3>
+                      <h3>  <a class="btn btn-info" href="/registerworker">Sign Up</a></h3>
 
                             </div>
                         </form>
