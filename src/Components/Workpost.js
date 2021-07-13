@@ -69,39 +69,40 @@ class Workpost extends Component {
                             <form>
                                 <div class="col-md-6 form-line">
                                     <div class="form-group">
-                                       <h2> <label for="exampleInputUsername">Your name</label>
+                                       <label for="exampleInputUsername">Your name</label>
                                         <input type="text" class="form-control" id="" placeholder=" Enter Name" value={this.state.Username}
-                                        /></h2>
+                                        />
                                     </div>
                                     <div class="form-group">
-                                      <h2>  <label for="exampleInputPhoneNo">Enter Phone Number</label>
+                                      <label for="exampleInputPhoneNo">Enter Phone Number</label>
                                         <input type="text" class="form-control" id="exampleInputPhoneNo"
-                                            placeholder=" Enter Phone Number" value={this.state.PhoneNo}/></h2>
+                                            placeholder=" Enter Phone Number" value={this.state.PhoneNo}/>
                                     </div>
                                     <div class="form-group">
-                                       <h2> <label for="picture">Picture</label>
+                                       <label for="picture">Picture</label>
                                         <input type="file" class="form-control" id="picture"
-                                            placeholder=" Upload the picture" onChange={this.fileHandler}/></h2>
+                                            placeholder=" Upload the picture" onChange={this.fileHandler}/>
                                     </div>
                                     <div class="form-group">
-                                        <h2><label for="exampleInputtext">Tags</label></h2><br></br>
-                                        <h2><select name="tags" id="tags" value={this.state.Tags} 
+                                        <label for="exampleInputtext">Tags</label><br/>
+                                        <h4><select name="tags" id="tags" value={this.state.Tags} 
                                         onChange={(event) => { this.setState({ Tags: event.target.value }) }}>
                                             <option value="plumber">Plumber</option>
                                             <option value="mechanic">Mechanic</option>
                                             <option value="Construction">Construction</option>
-                                        </select></h2>
+                                        </select>
+                                        </h4>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                      <h2>  <label for="description"> Work Description</label>
+                                      <label for="description"> Work Description</label>
                                         <textarea class="form-control" id="description" placeholder="Enter Your Message" 
-                                        value={this.state.Workdescription} onChange={(event) => { this.setState({ Workdescription: event.target.value }) }}></textarea></h2>
+                                        value={this.state.Workdescription} onChange={(event) => { this.setState({ Workdescription: event.target.value }) }}></textarea>
                                     </div>
                                     <div>
 
-                                    <h2><input type="submit" value="Post the Work" onClick={this.Workpost} /></h2>
+                                    <h4><input type="submit" value="Post the Work" onClick={this.Workpost} /></h4>
                                     </div>
 
                                 </div>

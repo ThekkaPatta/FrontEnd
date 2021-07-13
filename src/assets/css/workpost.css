@@ -39,20 +39,24 @@
 }
 
 .form-group{
-  margin-top: 10px;
+  margin-top: 4px;
+  font-size: 1.3em;
 }
 label{
   font-size: 1.6em;
   line-height: 1em;
   font-weight: normal;
 }
+
 .form-control{
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: #080808;
+  padding-top:0%;
+  margin-top:0px;
 }
 textarea.form-control {
-    height: 135px;
-   /* margin-top: px;*/
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .submit{
